@@ -6,27 +6,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./styles/css/index.css" />
         <link rel="icon" href="https://www.hyperactive.co.il/hyperactive_logo.ico" type="image/x-icon" />
+        <script src="./js/main.js" defer></script>
         <title>הייפראקטיב - בית הספר להיי-טק הטוב בישראל</title>
+        <script src="https://kit.fontawesome.com/507a7da555.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header class="header">
             <div class="header-container">
                 <a href="/">
                     <div class="logo">
-                        <img src="./photos/hyperactive_logo_main.png" />
-                        <div class="logo-sub">בית הספר להיי-טק הטוב בישראל</div>
+                        <img src="./photos/logo.png" />
                     </div>
                 </a>
-                <button class="hamburger-button">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </button>
-                <nav class="navigation-container">
-                    <div class="inner-nav-container">
+                <nav id="navigation-container" class="navigation-container">
+                    <div id="inner-nav-container" class="inner-nav-container">
                         <ul>
                             <li>
-                                <a href="">קריירה</a>
+                                <a href="">קריירות <i class="fa-solid fa-caret-down"></i> </a>
                             </li>
                             <li>
                                 <a href="">למה ללמוד אצלנו ?</a>
@@ -44,14 +40,36 @@
                                 <a href="">שאלות שכנראה תשאלו</a>
                             </li>
                             <li>
-                                <a href="">שירות לציבור</a>
+                                <a id="a-last" href="">שירות לציבור</a>
                             </li>
                         </ul>
                     </div>
                 </nav>
+                <div class="button" id="button">
+                    <input type="checkbox" id="checkbox" class="checkbox visuallyHidden" />
+                    <label for="checkbox">
+                        <div class="hamburger">
+                            <span class="bar bar1"></span>
+                            <span class="bar bar2"></span>
+                            <span class="bar bar3"></span>
+                        </div>
+                    </label>
+                </div>
             </div>
         </header>
         <main></main>
         <footer></footer>
     </body>
 </html>
+<!-- <div class="drop-down drop-down-inner-menu open">
+    <a id="navigationbar-cyber-page-link" href="/cyber-page">סייבר ואבטחת מידע | ethical hacking</a>
+    <a id="navigationbar-system-page-link" href="/system-admin-page/#navigation-bar">
+        ניהול רשתות ומחשוב | system administration
+    </a>
+    <a id="navigationbar-marketing-page-link" href="/marketing-page"> שיווק דיגיטלי | seo/social/sales&amp;marketing</a>
+    <a id="navigationbar-qa-page-link" href="/qa-page">בדיקת תוכנה | qa &amp; automation</a>
+    <a id="navigationbar-ui-page-link" href="/ui-ux-page">עיצוב גרפי | ui/ux</a>
+    <a id="navigationbar-fullstack-page-link" href="/fullstack-page">פיתוח תוכנה | full stack </a>
+    <a id="navigationbar-embedded-page-link" href="/embedded-page">פיתוח מערכות משובצות מחשב | embedded</a>
+    <a id="navigationbar-mobile-page-link" href="/mobile-page">פיתוח אפליקציות מובייל | ios/android</a>
+</div> -->

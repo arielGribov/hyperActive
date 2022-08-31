@@ -117,6 +117,10 @@ body {
   display: none;
 }
 
+.careers-dropdown {
+  display: none;
+}
+
 .show-inner-nav-container {
   display: flex;
   margin-top: 80px;
@@ -135,13 +139,40 @@ body {
   white-space: nowrap;
   list-style: none;
 }
-.show-inner-nav-container li {
+.show-inner-nav-container ul li {
   height: 100%;
   padding: 5px;
 }
-.show-inner-nav-container li a {
+.show-inner-nav-container ul li a {
   color: black;
   font-size: 20px;
+}
+.show-inner-nav-container ul .careers {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  outline: inherit;
+  font-size: 20px;
+}
+
+.show-careers-dropdown {
+  display: flex;
+  flex-wrap: wrap;
+}
+.show-careers-dropdown .careers-dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-right: -80px;
+  margin-top: 20px;
+}
+.show-careers-dropdown .careers-dropdown a {
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+  border-bottom: 1px dashed #aad6be;
 }
 
 @media (min-width: 925px) {

@@ -11,6 +11,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  height: 100vh;
 }
 
 .header {
@@ -123,9 +124,10 @@ body {
 
 .show-inner-nav-container {
   display: flex;
-  margin-top: 80px;
-  margin-right: -180px;
-  width: 100%;
+  position: absolute;
+  right: 5px;
+  top: 20px;
+  white-space: nowrap;
 }
 .show-inner-nav-container ul {
   display: flex;
@@ -160,6 +162,7 @@ body {
 .show-careers-dropdown {
   display: flex;
   flex-wrap: wrap;
+  white-space: nowrap;
 }
 .show-careers-dropdown .careers-dropdown {
   display: flex;
@@ -198,6 +201,7 @@ body {
   }
   .navigation-container .inner-nav-container {
     display: flex;
+    position: relative;
   }
   .navigation-container .inner-nav-container ul {
     display: flex;
@@ -217,10 +221,63 @@ body {
     color: black;
     font-size: 16px;
   }
+  .navigation-container .inner-nav-container ul li a:hover,
+.navigation-container .inner-nav-container ul li .careers:hover {
+    color: #213a80;
+    font-weight: bold;
+    transition: color font-weight 0.5s ease-out;
+  }
   .navigation-container .inner-nav-container ul li a::after {
     content: "|";
     font-size: 1.5rem;
     margin: 5%;
     color: black;
+  }
+  .navigation-container .inner-nav-container ul li .careers {
+    font-size: 16px;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    outline: inherit;
+  }
+  .navigation-container .inner-nav-container ul li .careers::after {
+    content: "|";
+    font-size: 1.5rem;
+    margin: 5%;
+    color: black;
+  }
+  .navigation-container .inner-nav-container ul li .careers:hover .careers-dropdown {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: start;
+    align-items: right;
+    text-align: right;
+    background-color: #213a80;
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    transform: translateY(100%);
+    width: 100%;
+    height: 300px;
+    z-index: 2;
+    margin-top: -60px;
+  }
+  .navigation-container .inner-nav-container ul li .careers:hover .careers-dropdown a::after {
+    content: "";
+  }
+  .navigation-container .inner-nav-container ul li .careers:hover .careers-dropdown a {
+    margin-right: 5px;
+  }
+  .navigation-container .inner-nav-container ul li .careers:hover .careers-dropdown a span {
+    color: white;
+  }
+  .navigation-container .inner-nav-container ul li .careers:hover .careers-dropdown:hover a span:hover {
+    color: #213a80;
+    background-color: white;
+    font-weight: bold;
+    transition: color font-weight 0.5s ease-out;
   }
 }

@@ -5,7 +5,8 @@ hamburgerButtonCheckbox.onclick = () => {
 };
 const careers = document.getElementById('careers');
 const careersDropDown = document.getElementById('careers-dropdown');
-console.log(careersDropDown);
+
+// console.log(window.innerWidth);
 careers.onclick = () => {
-    careers.classList.toggle('show-careers-dropdown');
+    if (window.innerWidth < 925) careers.classList.toggle('show-careers-dropdown');
 };

@@ -11,46 +11,47 @@
         <script src="https://kit.fontawesome.com/507a7da555.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <header class="header">
+        <header id="header" class="header">
             <div class="header-container">
-                <a href="/">
-                    <div class="logo">
+                <a class="logo" href="/">
+                    <div>
                         <img src="./photos/logo.png" />
                     </div>
                 </a>
                 <nav id="navigation-container" class="navigation-container">
                     <div id="inner-nav-container" class="inner-nav-container">
                         <ul>
-                            <li>
-                                <button class="careers" id="careers">
-                                    קריירות <i class="fa-solid fa-caret-down"></i>
-                                    <div id="careers-dropdown" class="careers-dropdown">
-                                        <a id="navigationbar-cyber-page-link" href="">
-                                            <span> סייבר ואבטחת מידע | ethical hacking </span>
-                                        </a>
-                                        <a id="navigationbar-system-page-link" href="">
-                                            <span> ניהול רשתות ומחשוב | system administration </span>
-                                        </a>
-                                        <a id="navigationbar-marketing-page-link" href="">
-                                            <span> שיווק דיגיטלי | seo/social/sales &amp; marketing </span>
-                                        </a>
-                                        <a id="navigationbar-qa-page-link" href="">
-                                            <span> בדיקת תוכנה | qa &amp; automation </span>
-                                        </a>
-                                        <a id="navigationbar-ui-page-link" href="">
-                                            <span> עיצוב גרפי | ui/ux </span>
-                                        </a>
-                                        <a id="navigationbar-fullstack-page-link" href="">
-                                            <span> פיתוח תוכנה | full stack </span>
-                                        </a>
-                                        <a id="navigationbar-embedded-page-link" href="">
-                                            <span> פיתוח מערכות משובצות מחשב | embedded </span>
-                                        </a>
-                                        <a id="navigationbar-mobile-page-link" href="">
-                                            <span> פיתוח אפליקציות מובייל | ios/android </span>
-                                        </a>
-                                    </div>
-                                </button>
+                            <li id="li-careers">
+                                <div class="careers" id="careers">
+                                    <a class="careers-button">קריירות</a>
+                                    <i class="fa-solid fa-caret-down"></i>
+                                </div>
+                                <div id="careers-dropdown" class="careers-dropdown">
+                                    <a id="navigationbar-cyber-page-link" href="">
+                                        <span> סייבר ואבטחת מידע | ethical hacking </span>
+                                    </a>
+                                    <a id="navigationbar-system-page-link" href="">
+                                        <span> ניהול רשתות ומחשוב | system administration </span>
+                                    </a>
+                                    <a id="navigationbar-marketing-page-link" href="">
+                                        <span> שיווק דיגיטלי | seo/social/sales &amp; marketing </span>
+                                    </a>
+                                    <a id="navigationbar-qa-page-link" href="">
+                                        <span> בדיקת תוכנה | qa &amp; automation </span>
+                                    </a>
+                                    <a id="navigationbar-ui-page-link" href="">
+                                        <span> עיצוב גרפי | ui/ux </span>
+                                    </a>
+                                    <a id="navigationbar-fullstack-page-link" href="">
+                                        <span> פיתוח תוכנה | full stack </span>
+                                    </a>
+                                    <a id="navigationbar-embedded-page-link" href="">
+                                        <span> פיתוח מערכות משובצות מחשב | embedded </span>
+                                    </a>
+                                    <a id="navigationbar-mobile-page-link" href="">
+                                        <span> פיתוח אפליקציות מובייל | ios/android </span>
+                                    </a>
+                                </div>
                             </li>
                             <li><a href="">למה ללמוד אצלנו ?</a></li>
                             <li><a href="">כאן תמצאו את הבוגרים שלנו</a></li>
@@ -73,8 +74,89 @@
                 </div>
             </div>
         </header>
-        <main></main>
+        <main class="main">
+            <div id="blueBar" class="blueBar">
+                <div class="didntWork">לא עבדת ?</div>
+                <div class="didntPay">לא שילמת !</div>
+            </div>
+            <div class="thousand-banner">אבחון, יעוץ ומיון מקצועי בשווי 1000 ש״ח על חשבוננו</div>
+            <div class="fields-of-expertise">
+                <h1 class="headline">מה הקריירה שלך בהיי-טק ?</h1>
+                <a href="">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </a>
+                <a href="">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </a>
+                <a href="">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </a>
+                <a href="">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </a>
+                <a href="">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </a>
+                <a href="">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </a>
+                <a href="">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </a>
+                <a href="">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </a>
+            </div>
+        </main>
         <footer></footer>
     </body>
 </html>
-<!-- -->
+<!-- <a id="cyber-data" class="course-container" href="/cyber-page"
+    ><div class="course-logo">
+        <img
+            src="data:image/png;base64,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"
+            class="course_img"
+        />
+    </div>
+    <div class="course-separetor"></div>
+    <div class="course-name">סייבר ואבטחת מידע | ethical hacking</div>
+    <div class="arrow-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+            <g id="Layer_2" data-name="Layer 2">
+                <g id="Layer_1-2" data-name="Layer 1">
+                    <path
+                        class="cls-1"
+                        d="M15,30A15,15,0,1,1,30,15,15,15,0,0,1,15,30ZM25,13.75a1.26,1.26,0,0,0-1.25-1.25H14l3.69-3.69a1.23,1.23,0,0,0,0-1.76L15.86,5.27A1.24,1.24,0,0,0,15,4.92a1.26,1.26,0,0,0-.88.35L7,12.34,5.25,14.12a1.28,1.28,0,0,0,0,1.76L7,17.66l7.07,7.07a1.26,1.26,0,0,0,.88.35,1.24,1.24,0,0,0,.88-.35L17.64,23a1.28,1.28,0,0,0,0-1.76L14,17.5h9.8A1.26,1.26,0,0,0,25,16.25Z"
+                    ></path>
+                </g>
+            </g>
+            <defs></defs>
+            <title>arrow</title>
+            <script xmlns=""></script>
+        </svg>
+    </div>
+</a> -->

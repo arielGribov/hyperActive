@@ -12,3 +12,4 @@ careers.onclick = () => {
         careersDropDown.classList.toggle('show-careers-dropdown');
     }
 };
+window.addEventListener('resize', () => {});

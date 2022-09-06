@@ -226,6 +226,7 @@ body {
   flex-wrap: wrap;
   flex-direction: column;
   gap: 5px;
+  animation: show 0.8s;
 }
 .main .fields-of-expertise .expertise-container .experty-container {
   display: flex;
@@ -275,6 +276,9 @@ body {
 }
 .main .fields-of-expertise .expertise-container .experty-container:hover {
   opacity: 0.7;
+}
+.main .hear-more {
+  display: none;
 }
 
 @media (min-width: 450px) {
@@ -444,5 +448,109 @@ body {
   }
   .main .blueBar .didntPay {
     font-size: 120px;
+  }
+  .main .main-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+  }
+  .main .main-section .fields-of-expertise {
+    width: 650px;
+  }
+  .main .main-section .hear-more {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #154b9c;
+    color: white;
+    margin-top: 100px;
+    position: relative;
+    left: 1vw;
+  }
+  .main .main-section .hear-more h2 {
+    direction: ltr;
+    text-align: end;
+    margin: 12px;
+  }
+  .main .main-section .hear-more .input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .main .main-section .hear-more .input-container .costum-input {
+    display: flex;
+    align-items: center;
+    background: white;
+    width: 250px;
+    height: 60px;
+    margin: 12px;
+  }
+  .main .main-section .hear-more .input-container .costum-input label {
+    width: 25%;
+    margin-left: 10px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    padding-right: 5px;
+    color: #373737;
+    font-weight: 700;
+  }
+  .main .main-section .hear-more .input-container .costum-input .separetor {
+    position: relative;
+    float: left;
+    background: #213b7f;
+    width: 3px;
+    height: 1.3rem;
+    border-radius: 20px;
+    flex-shrink: 0;
+  }
+  .main .main-section .hear-more .input-container .costum-input input {
+    width: 70%;
+    max-width: 250px;
+    height: 100%;
+    border: none;
+  }
+  .main .main-section .hear-more .agree-checkbox {
+    margin-top: 5%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    direction: ltr;
+  }
+  .main .main-section .hear-more .agree-checkbox .agree-explain {
+    margin-right: 2%;
+    direction: rtl;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .main .main-section .hear-more .privacy-policy {
+    margin-top: 0.5rem;
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  .main .main-section .hear-more .sumbit-contact {
+    padding: 0;
+    align-self: center;
+    height: 60px;
+    width: 256px;
+    margin-top: 10px;
+    background: #fff6df;
+    border: none;
+    margin-bottom: 10%;
+  }
+  .main .main-section .hear-more .sumbit-contact .sumbit-contact-inner-box {
+    display: flex;
+    border: 2px solid #00b8d4;
+    justify-content: center;
+    align-items: center;
+    height: 96%;
+    width: 99%;
+    margin: 1px;
+    color: #000;
+    font-size: 2.3rem;
+    font-weight: 600;
+    direction: ltr;
   }
 }

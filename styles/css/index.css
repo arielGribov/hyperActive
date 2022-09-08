@@ -189,6 +189,14 @@ body {
 .main {
   margin-top: 0px;
 }
+.main h2 {
+  margin: 10px auto;
+  text-align: center;
+}
+.main p {
+  font-size: 1.1rem;
+  cursor: default;
+}
 .main .blueBar {
   display: flex;
   flex-direction: column;
@@ -280,6 +288,116 @@ body {
 .main .hear-more {
   display: none;
 }
+.main .why-learn-with-us {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-image: url("../../photos/why-learn-with-us-background.png") no-repeat;
+  background-size: cover;
+  flex-wrap: wrap;
+}
+.main .why-learn-with-us h1 {
+  font-size: 2.9rem;
+}
+.main .why-learn-with-us .why-learn-container {
+  width: 100%;
+  padding: 50px 15px 60px 0;
+  font-size: 1.1rem;
+}
+.main .why-learn-with-us .why-learn-container .pro-text {
+  margin-right: 5px;
+}
+.main .why-learn-with-us .why-learn-container .blue {
+  color: #00f;
+}
+.main .why-learn-with-us .why-learn-container .why-learn-main .black-side {
+  padding: 10px;
+  margin: 10px 0;
+  background: #000;
+  color: #fff;
+}
+.main .why-learn-with-us .why-learn-container .why-learn-main .black-side a {
+  display: inline;
+  text-decoration: underline;
+  color: #fff;
+  font-weight: 600;
+}
+.main .why-learn-with-us .why-learn-container .why-learn-main .green-side {
+  padding: 10px;
+  margin: 10px 0;
+  background: #eff6df;
+  color: #000;
+}
+.main .graduaters .firms-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+}
+.main .graduaters .firms-container .comps-logo {
+  max-height: 100px;
+  max-width: 100px;
+  margin: 22px;
+  flex-shrink: 0;
+  object-fit: fill;
+}
+.main .how-it-works {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  flex-grow: 0;
+  background: #e4e4e4;
+}
+.main .how-it-works h2 {
+  font-size: 2.9rem;
+}
+.main .how-it-works .how-it-works-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+  padding: 20px;
+  width: 100%;
+}
+.main .questions {
+  background: #fff6df;
+}
+.main .questions .questions-container {
+  direction: rtl;
+  padding: 0 10px;
+  border: 0.5px solid #dbdbdb;
+  border-right: none;
+  border-left: none;
+  width: 100%;
+}
+.main .questions .questions-container .question-answer-container {
+  padding: 0 10px;
+  border: 0.5px solid #dbdbdb;
+  border-right: none;
+  border-left: none;
+  width: 100%;
+}
+.main .questions .questions-container .question-answer-container .question {
+  font-weight: 600;
+  font-size: 1.1rem;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 5px;
+  color: #007cba;
+}
+.main .questions .questions-container .question-answer-container .answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
 
 @media (min-width: 450px) {
   .main .blueBar .didntWork {
@@ -305,6 +423,7 @@ body {
     text-decoration: none;
     margin-left: 20px;
     margin-bottom: 10px;
+    border: none;
   }
   .main .fields-of-expertise .expertise-container .experty-container .img-logo img {
     width: max-content;
@@ -460,11 +579,10 @@ body {
   .main .main-section .hear-more {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     background-color: #154b9c;
     color: white;
     margin-top: 100px;
-    position: relative;
+    margin-right: 10%;
     left: 1vw;
   }
   .main .main-section .hear-more h2 {
@@ -476,6 +594,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-right: 5px;
   }
   .main .main-section .hear-more .input-container .costum-input {
     display: flex;
@@ -495,7 +614,6 @@ body {
     font-weight: 700;
   }
   .main .main-section .hear-more .input-container .costum-input .separetor {
-    position: relative;
     float: left;
     background: #213b7f;
     width: 3px;
@@ -510,7 +628,7 @@ body {
     border: none;
   }
   .main .main-section .hear-more .agree-checkbox {
-    margin-top: 5%;
+    margin: 5%;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -539,6 +657,7 @@ body {
     background: #fff6df;
     border: none;
     margin-bottom: 10%;
+    margin-right: 10%;
   }
   .main .main-section .hear-more .sumbit-contact .sumbit-contact-inner-box {
     display: flex;
@@ -552,5 +671,28 @@ body {
     font-size: 2.3rem;
     font-weight: 600;
     direction: ltr;
+  }
+  .main .why-learn-with-us .why-learn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .main .why-learn-with-us .why-learn-container .why-learn-main {
+    display: flex;
+  }
+  .main .why-learn-with-us .why-learn-container .why-learn-main .green-side,
+.main .why-learn-with-us .why-learn-container .why-learn-main .black-side {
+    width: 50%;
+    transition: all 0.5s linear;
+  }
+  .main .why-learn-with-us .why-learn-container .why-learn-main .green-side:hover,
+.main .why-learn-with-us .why-learn-container .why-learn-main .black-side:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 50px #000;
+  }
+  .main .about-us p {
+    max-width: 1100px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }

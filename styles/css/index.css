@@ -186,6 +186,10 @@ body {
   border-bottom: 1px dashed #aad6be;
 }
 
+.bg-img-gray {
+  background-image: url("../../photos/why-learn-with-us-background.png");
+}
+
 .main {
   margin-top: 0px;
 }
@@ -294,7 +298,6 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-image: url("../../photos/why-learn-with-us-background.png") no-repeat;
   background-size: cover;
   flex-wrap: wrap;
 }
@@ -316,12 +319,12 @@ body {
   padding: 10px;
   margin: 10px 0;
   background: #000;
-  color: #fff;
+  color: white;
 }
 .main .why-learn-with-us .why-learn-container .why-learn-main .black-side a {
   display: inline;
   text-decoration: underline;
-  color: #fff;
+  color: white;
   font-weight: 600;
 }
 .main .why-learn-with-us .why-learn-container .why-learn-main .green-side {
@@ -357,32 +360,79 @@ body {
 .main .how-it-works h2 {
   font-size: 2.9rem;
 }
-.main .how-it-works .how-it-works-container {
+.main .how-it-works .how-it-works-explain {
   display: flex;
   flex-direction: column;
   margin: 0 10px;
   padding: 20px;
   width: 100%;
 }
+.main .how-it-works .how-it-works-explain .categories-container {
+  padding: 20px;
+  width: 100%;
+}
+.main .how-it-works .how-it-works-explain .categories-container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.main .how-it-works .how-it-works-explain .categories-container ul .category-container {
+  padding: 20px;
+  margin: 10px 0;
+  width: 100%;
+  color: white;
+}
+.main .how-it-works .how-it-works-explain .categories-container ul .category-container .triangle {
+  display: none;
+}
+.main .how-it-works .how-it-works-explain .categories-container ul .category-container .category-title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+}
+.main .how-it-works .how-it-works-explain .categories-container ul .category-container .category-title i {
+  margin-left: 12px;
+  transition: rotate 0.5s linear;
+  rotate: 0deg;
+  color: black;
+  font-style: normal;
+  font-size: xx-large;
+}
+.main .how-it-works .how-it-works-explain .categories-container ul .category-container .category-inner-menu {
+  display: none;
+  transition: max-height 0.3s linear;
+  max-height: 900px;
+}
+.main .how-it-works .how-it-works-explain .categories-container ul .category-container .show-category {
+  display: block;
+}
+.main .how-it-works .how-it-works-explain .categories-container ul .category-container .rotate-to-x {
+  rotate: 45deg !important;
+}
+.main .how-it-works .how-it-works-explain .categories-container ul #programing-category {
+  background: #0598a8;
+}
+.main .how-it-works .how-it-works-explain .categories-container ul #web-category {
+  background: #39a4dc;
+}
+.main .how-it-works .how-it-works-explain .categories-container ul #embedded-category {
+  background: #06f;
+}
+.main .how-it-works .how-it-works-explain .categories-container ul #it-category {
+  background: #213b7f;
+}
 .main .questions {
   background: #fff6df;
 }
-.main .questions .questions-container {
-  direction: rtl;
+.main .questions-container .question-answer-container {
   padding: 0 10px;
   border: 0.5px solid #dbdbdb;
   border-right: none;
   border-left: none;
   width: 100%;
 }
-.main .questions .questions-container .question-answer-container {
-  padding: 0 10px;
-  border: 0.5px solid #dbdbdb;
-  border-right: none;
-  border-left: none;
-  width: 100%;
-}
-.main .questions .questions-container .question-answer-container .question {
+.main .questions-container .question-answer-container .question {
   font-weight: 600;
   font-size: 1.1rem;
   height: 80px;
@@ -393,10 +443,154 @@ body {
   padding: 5px;
   color: #007cba;
 }
-.main .questions .questions-container .question-answer-container .answer {
+.main .questions-container .question-answer-container .answer {
   max-height: 0;
   overflow: hidden;
   transition: all 0.2s ease-in-out;
+}
+.main .show-answer {
+  max-height: 800px !important;
+  margin-bottom: 15px;
+}
+
+.footer .leave-detail {
+  padding-bottom: 50px;
+  display: flex;
+  flex-flow: column;
+  background: #213b7f;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.footer .leave-detail h2 {
+  text-align: start;
+  direction: rtl;
+  font-size: 1.2rem;
+  margin: 0 10px 15px;
+  padding-top: 10px;
+}
+.footer .leave-detail form {
+  width: 70%;
+  margin: 0 auto;
+}
+.footer .leave-detail form .input-container {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}
+.footer .leave-detail form .input-container .footer-input {
+  width: 100%;
+  margin: 25px auto;
+}
+.footer .whatsapp {
+  display: none;
+}
+.footer .blue-banner-footer {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #06f;
+  height: 60px;
+}
+.footer .blue-banner-footer .blue-box-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  direction: ltr;
+  width: 50%;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+  border-right: 2px solid white;
+  text-decoration: none;
+}
+.footer .blue-banner-footer .blue-box-footer i {
+  margin-top: 2px;
+  margin-left: 5px;
+}
+
+form .input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 5px;
+}
+form .input-container .costum-input {
+  display: flex;
+  align-items: center;
+  background: white;
+  width: 250px;
+  height: 60px;
+  margin: 12px;
+}
+form .input-container .costum-input label {
+  width: 25%;
+  margin-left: 10px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  padding-right: 5px;
+  color: #373737;
+  font-weight: 700;
+}
+form .input-container .costum-input .separetor {
+  float: left;
+  background: #213b7f;
+  width: 3px;
+  height: 1.3rem;
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+form .input-container .costum-input input {
+  width: 70%;
+  max-width: 250px;
+  height: 100%;
+  border: none;
+}
+form .agree-checkbox {
+  margin: 5%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  direction: ltr;
+}
+form .agree-checkbox .agree-explain {
+  margin-right: 2%;
+  font-size: 13px;
+  font-weight: 700;
+}
+form .privacy-policy {
+  margin-top: 0.5rem;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+form .sumbit-contact {
+  padding: 0;
+  align-self: center;
+  height: 60px;
+  width: 256px;
+  margin-top: 10px;
+  background: #fff6df;
+  border: none;
+  margin-bottom: 10%;
+  margin-right: 10%;
+}
+form .sumbit-contact .sumbit-contact-inner-box {
+  display: flex;
+  border: 2px solid #00b8d4;
+  justify-content: center;
+  align-items: center;
+  height: 96%;
+  width: 99%;
+  margin: 1px;
+  color: #000;
+  font-size: 2.3rem;
+  font-weight: 600;
+  direction: ltr;
 }
 
 @media (min-width: 450px) {
@@ -590,88 +784,6 @@ body {
     text-align: end;
     margin: 12px;
   }
-  .main .main-section .hear-more .input-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 5px;
-  }
-  .main .main-section .hear-more .input-container .costum-input {
-    display: flex;
-    align-items: center;
-    background: white;
-    width: 250px;
-    height: 60px;
-    margin: 12px;
-  }
-  .main .main-section .hear-more .input-container .costum-input label {
-    width: 25%;
-    margin-left: 10px;
-    font-size: 0.9rem;
-    white-space: nowrap;
-    padding-right: 5px;
-    color: #373737;
-    font-weight: 700;
-  }
-  .main .main-section .hear-more .input-container .costum-input .separetor {
-    float: left;
-    background: #213b7f;
-    width: 3px;
-    height: 1.3rem;
-    border-radius: 20px;
-    flex-shrink: 0;
-  }
-  .main .main-section .hear-more .input-container .costum-input input {
-    width: 70%;
-    max-width: 250px;
-    height: 100%;
-    border: none;
-  }
-  .main .main-section .hear-more .agree-checkbox {
-    margin: 5%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    direction: ltr;
-  }
-  .main .main-section .hear-more .agree-checkbox .agree-explain {
-    margin-right: 2%;
-    direction: rtl;
-    font-size: 13px;
-    font-weight: 700;
-  }
-  .main .main-section .hear-more .privacy-policy {
-    margin-top: 0.5rem;
-    display: block;
-    text-align: center;
-    font-size: 12px;
-    font-weight: 600;
-    text-decoration: underline;
-  }
-  .main .main-section .hear-more .sumbit-contact {
-    padding: 0;
-    align-self: center;
-    height: 60px;
-    width: 256px;
-    margin-top: 10px;
-    background: #fff6df;
-    border: none;
-    margin-bottom: 10%;
-    margin-right: 10%;
-  }
-  .main .main-section .hear-more .sumbit-contact .sumbit-contact-inner-box {
-    display: flex;
-    border: 2px solid #00b8d4;
-    justify-content: center;
-    align-items: center;
-    height: 96%;
-    width: 99%;
-    margin: 1px;
-    color: #000;
-    font-size: 2.3rem;
-    font-weight: 600;
-    direction: ltr;
-  }
   .main .why-learn-with-us .why-learn-container {
     display: flex;
     flex-direction: column;
@@ -694,5 +806,92 @@ body {
     max-width: 1100px;
     margin-right: auto;
     margin-left: auto;
+  }
+  .main .inner-container {
+    padding: 65px 10px 10px;
+  }
+  .main .inner-container .questions-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+  }
+  .main .inner-container .questions-container .q-part {
+    display: flex;
+    flex-direction: column;
+  }
+  .main .inner-container .questions-container .q-part .question-answer-container {
+    width: 450px;
+    margin: 0 17px;
+    border-bottom: none;
+  }
+  .footer .leave-detail {
+    margin-top: 0;
+    width: 100%;
+  }
+  .footer .leave-detail form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .footer .leave-detail form .input-container {
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 950px;
+    margin: 0 auto;
+  }
+  .footer .leave-detail form .input-container .footer-input {
+    width: 22%;
+    max-width: 260px;
+    margin: 25px 5px;
+    flex-shrink: 5;
+  }
+  .footer .leave-detail form .input-container .sumbit-contact {
+    margin: 0 auto;
+  }
+  .footer .leave-detail form .agree-checkbox {
+    margin: 0;
+  }
+  .footer .whatsapp {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    direction: ltr;
+    width: 255px;
+    height: 35px;
+    position: fixed;
+    background: #06f;
+    top: 95vh;
+    right: 1vw;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+    color: white;
+    font-weight: 600;
+    font-size: 1.3rem;
+    border-radius: 15px;
+    border: 2px solid #25d366;
+  }
+  .footer .blue-banner-footer {
+    display: none;
+  }
+}
+@media (min-width: 1205px) {
+  .how-it-works .categories-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 300px;
+    width: 100%;
+  }
+  .how-it-works .categories-container ul {
+    flex-shrink: 0;
+    width: 1100px;
+    display: grid;
+    grid-template-rows: repeat(0, 18.75rem);
+    grid-template-columns: repeat(4, 25%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
 }

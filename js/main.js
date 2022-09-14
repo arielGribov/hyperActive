@@ -7,8 +7,20 @@ const question = document.getElementsByClassName('question');
 const answer = document.getElementsByClassName('answer');
 const categories = document.getElementsByClassName('category-container');
 const catAns = document.getElementsByClassName('category-inner-menu');
-const pluses = document.getElementsByClassName('fa-thin');
+const pluses = document.getElementsByClassName('fa-plus');
+const mainModal = document.getElementById('main-modal');
+const closeMainModal = document.getElementsByClassName('close-button')[0];
+const talkToMeButton = document.getElementById('sumbit-contact');
+const emailModal = document.getElementsByClassName('email-modal')[0];
+const closeEmailModal = document.getElementById('close-email-modal');
+const mainModalButton = document.getElementsByClassName('modal-button')[0];
 
+setTimeout(() => {
+    mainModal.classList.add('show-main-modal');
+}, 2000);
+closeMainModal.onclick = () => {
+    mainModal.classList.add('hide-main-modal');
+};
 hamburgerButtonCheckbox.onclick = () => {
     navBar.classList.toggle('show-inner-nav-container');
 };
@@ -17,7 +29,16 @@ careers.onclick = () => {
         careersDropDown.classList.toggle('show-careers-dropdown');
     }
 };
-
+talkToMeButton.onclick = () => {
+    emailModal.style.display = 'flex';
+};
+mainModalButton.onclick = () => {
+    mainModal.classList.add('hide-main-modal');
+    emailModal.style.display = 'flex';
+};
+closeEmailModal.onclick = () => {
+    emailModal.style.display = 'none';
+};
 for (let i = 0; i < question.length; i++) {
     question[i].onclick = () => {
         answer[i].classList.toggle('show-answer');

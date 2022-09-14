@@ -75,6 +75,39 @@
             </div>
         </header>
         <main class="main">
+            <div id="main-modal" class="main-modal">
+                <div class="modal">
+                    <div class="close-button">
+                        <i class="fa-thin fa-x"></i>
+                    </div>
+                    <div class="modal-content">
+                        <div class="modal-text">
+                            <div class="modal-title">מעוניינים לקבל ייעוץ חינם לגבי לימודי הייטק? השאירו פרטים!</div>
+                        </div>
+                        <form class="modal-form">
+                            <div class="inputs-group">
+                                <div class="input-wrapper">
+                                    <input class="modal-input" name="name" placeholder="שם מלא" type="text" />
+                                </div>
+                                <div class="input-wrapper">
+                                    <input class="modal-input" name="phone" placeholder="מספר טלפון" type="text" />
+                                </div>
+                                <div class="input-wrapper">
+                                    <input class="modal-input" name="email" placeholder="אי-מייל" type="text" />
+                                </div>
+                            </div>
+                            <div class="agree-checkbox">
+                                <label class="agree-explain">אני מאשר קבלת עדכונים ומבצעים מהייפראקטיב.</label>
+                                <input class="checkbox" type="checkbox" checked="" />
+                            </div>
+                            <button type="button" class="modal-button">
+                                <i class="fas fa-chevron-left"></i>
+                                <i class="fas fa-chevron-left"></i> דברו איתי
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
             <div id="blueBar" class="blueBar">
                 <div class="didntWork">לא עבדת ?</div>
                 <div class="didntPay">לא שילמת !</div>
@@ -135,6 +168,16 @@
                     </div>
                 </div>
                 <div class="hear-more">
+                    <div class="email-modal">
+                        <div class="email-modal-content">
+                            <i id="close-email-modal" class="fas fa-times"></i>
+                            <h3 class="email-modal-title">תודה רבה!</h3>
+                            <div class="modal-text">
+                                עשית את הצעד הראשון בהסבה מקצועית לענף ההיי-טק.&nbsp; ניצור איתך קשר בהקדם.
+                            </div>
+                            <i class="far fa-check-circle"></i>
+                        </div>
+                    </div>
                     <form>
                         <div class="input-container">
                             <h2>?רוצה לשמוע עוד</h2>
@@ -160,9 +203,9 @@
                         </div>
                         <a class="privacy-policy">מדיניות פרטיות משתמשים</a>
                         <a class="privacy-policy">הצהרת נגישות</a>
-                        <button class="sumbit-contact">
-                            <div class="sumbit-contact-inner-box">! דברו איתי</div>
-                        </button>
+                        <div class="sumbit-contact">
+                            <div id="sumbit-contact" class="sumbit-contact-inner-box">! דברו איתי</div>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -336,7 +379,7 @@
                                         מסלול הכשרה
                                         <i class="fa-thin fa-plus"></i>
                                     </li>
-                                    <div class="category-inner-menu close take-out-from-flow">
+                                    <div class="category-inner-menu">
                                         <p>
                                             למועמדים שיעברו בהצלחה את תהליכי האבחון ימונה מנהל תוכנית אישי. המנהל האישי
                                             ישב עם המועמד ויגדיר עימו מסגרת הכשרה מותאמת אישית. המסגרת תקבע בהתאם
@@ -352,14 +395,14 @@
                                             בקבוצות קטנות.
                                         </p>
                                     </div>
-                                    <div class="triangle triangle-down desktop-only"></div>
+                                    <div class="triangle triangle-down"></div>
                                 </div>
                                 <div id="embedded-category" class="category-container">
                                     <li class="category-title">
                                         תהליך השיבוץ
                                         <i class="fa-thin fa-plus"></i>
                                     </li>
-                                    <div class="category-inner-menu close take-out-from-flow">
+                                    <div class="category-inner-menu">
                                         <p>
                                             עם סיום ההכשרה, תעברו לטיפול מחלקת ההשמה - תעברו סדנת הכנה ואימון מתקדם
                                             לקראת ראיונות עבודה, תעברו סדרת ראיונות אצל לקוחות עד שתתקבלו לעבודה המיוחלת
@@ -367,14 +410,14 @@
                                             הקורס אותו עברתם…
                                         </p>
                                     </div>
-                                    <div class="triangle triangle-right desktop-only"></div>
+                                    <div class="triangle triangle-right"></div>
                                 </div>
                                 <div id="it-category" class="category-container">
                                     <li class="category-title">
                                         קריירה חדשה
                                         <i class="fa-thin fa-plus"></i>
                                     </li>
-                                    <div class="category-inner-menu close take-out-from-flow">
+                                    <div class="category-inner-menu">
                                         <p>
                                             עשיתם את זה, נכנסתם לענף ההיי-טק. אתם עובדים באחת מחברות ההיי-טק המובילות
                                             בישראל. אנחנו עדיין עומדים לרשותכם לעזרה, ליתר בטחון. אם תרצו גם נסייע לכם
@@ -741,7 +784,7 @@
                 <i class="fa-brands fa-whatsapp"></i>
             </div>
             <div class="blue-banner-footer">
-                <a class="blue-box-footer" href="#contact-hyper-footer">
+                <a class="blue-box-footer">
                     <span class="hover-underline">לפרטים</span>
                     <i class="far fa-hand-point-up"></i>
                 </a>

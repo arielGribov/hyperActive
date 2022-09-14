@@ -13,6 +13,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 .header {
@@ -24,6 +25,7 @@ body {
   top: 0;
   left: 0;
   background-color: white;
+  z-index: 100;
 }
 
 .header-container {
@@ -201,6 +203,9 @@ body {
   font-size: 1.1rem;
   cursor: default;
 }
+.main .main-modal {
+  display: none;
+}
 .main .blueBar {
   display: flex;
   flex-direction: column;
@@ -292,6 +297,9 @@ body {
 .main .hear-more {
   display: none;
 }
+.main .hear-more .email-modal {
+  display: none;
+}
 .main .why-learn-with-us {
   display: flex;
   flex-flow: column;
@@ -318,7 +326,7 @@ body {
 .main .why-learn-with-us .why-learn-container .why-learn-main .black-side {
   padding: 10px;
   margin: 10px 0;
-  background: #000;
+  background: black;
   color: white;
 }
 .main .why-learn-with-us .why-learn-container .why-learn-main .black-side a {
@@ -331,7 +339,7 @@ body {
   padding: 10px;
   margin: 10px 0;
   background: #eff6df;
-  color: #000;
+  color: black;
 }
 .main .graduaters .firms-container {
   display: flex;
@@ -400,12 +408,12 @@ body {
   font-size: xx-large;
 }
 .main .how-it-works .how-it-works-explain .categories-container ul .category-container .category-inner-menu {
-  display: none;
+  max-height: 0;
   transition: max-height 0.3s linear;
-  max-height: 900px;
+  overflow: hidden;
 }
 .main .how-it-works .how-it-works-explain .categories-container ul .category-container .show-category {
-  display: block;
+  max-height: 900px;
 }
 .main .how-it-works .how-it-works-explain .categories-container ul .category-container .rotate-to-x {
   rotate: 45deg !important;
@@ -509,6 +517,57 @@ body {
 .footer .blue-banner-footer .blue-box-footer i {
   margin-top: 2px;
   margin-left: 5px;
+  text-decoration: none !important;
+}
+.footer .blue-banner-footer .blue-box-footer:hover {
+  cursor: pointer;
+  text-decoration-line: underline;
+}
+
+.email-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.31);
+  justify-content: center;
+  align-items: center;
+}
+.email-modal .email-modal-content {
+  height: 400px;
+  width: 600px;
+  background-color: white;
+  padding: 25px 15px 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.email-modal .email-modal-content .fa-times {
+  color: black;
+  font-size: 1.8rem;
+  margin-top: -10px;
+  align-self: flex-end;
+  margin-left: 10px;
+}
+.email-modal .email-modal-content .email-modal-title {
+  color: black;
+  font-size: 4rem;
+  margin: -10px 0 10px;
+}
+.email-modal .email-modal-content .modal-text {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  color: black;
+  text-align: start;
+  font-size: 2.4rem;
+}
+.email-modal .email-modal-content .fa-check-circle {
+  color: green;
+  font-size: 5rem;
+  align-self: flex-end;
+  margin: 20px 20px 0 30px;
 }
 
 form .input-container {
@@ -587,7 +646,7 @@ form .sumbit-contact .sumbit-contact-inner-box {
   height: 96%;
   width: 99%;
   margin: 1px;
-  color: #000;
+  color: black;
   font-size: 2.3rem;
   font-weight: 600;
   direction: ltr;
@@ -599,6 +658,121 @@ form .sumbit-contact .sumbit-contact-inner-box {
   }
   .main .blueBar .didntPay {
     font-size: 66px;
+  }
+  .main .main-modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.31);
+    z-index: 1000;
+    transition: all 0.5s ease-out;
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(-100vh);
+  }
+  .main .main-modal .modal {
+    z-index: -5;
+    background: white;
+    position: relative;
+    flex-wrap: wrap;
+    width: 610px;
+    height: 610px;
+    border-radius: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    overflow: hidden;
+  }
+  .main .main-modal .modal .close-button > i {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 20px;
+    width: 2px;
+    height: 30px;
+    font-style: normal;
+    font-size: xx-large;
+  }
+  .main .main-modal .modal .modal-content,
+.main .main-modal .modal .modal-text {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  .main .main-modal .modal .modal-content {
+    justify-content: space-around;
+    height: 100%;
+  }
+  .main .main-modal .modal .modal-text {
+    justify-content: center;
+    text-align: start;
+    color: black;
+    font-size: 1.5rem;
+    direction: rtl;
+  }
+  .main .main-modal .modal .modal-text .modal-title {
+    direction: rtl;
+    width: 75%;
+    text-align: center;
+    color: #154b9c;
+    font-weight: 800;
+    font-size: 2rem;
+    z-index: 1;
+    margin: 10px 0;
+  }
+  .main .main-modal .modal .modal-form {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    color: #040ea3;
+    width: 55vw;
+    max-width: 400px;
+    z-index: 1;
+    margin-top: -55px;
+  }
+  .main .main-modal .modal .modal-form .input-wrapper input {
+    color: #040ea3;
+    font-weight: 800;
+    width: 400px;
+    height: 7vh;
+    margin: 15px 0;
+    padding-right: 5px;
+    border: 0 solid #352f8a;
+    box-shadow: 0 0 4px -1px #213b7f;
+  }
+  .main .main-modal .modal .modal-form .agree-checkbox {
+    margin: 5px 0 10px;
+    width: 310px;
+  }
+  .main .main-modal .modal .modal-form .modal-button {
+    background: #154b9c;
+    width: 210px;
+    border: none;
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 5px;
+    height: 50px;
+  }
+  .main .main-modal .modal:before {
+    content: "";
+    background-image: url("../../photos/modal-bg.jpg");
+    background-size: contain;
+    width: 160%;
+    height: 160%;
+    position: absolute;
+    rotate: 40deg;
+  }
+  .main .show-main-modal {
+    transform: translateY(0);
+    max-height: 110vh;
+  }
+  .main .hide-main-modal {
+    transform: translateY(-100vh);
+    max-height: 0;
   }
   .main .fields-of-expertise {
     display: flex;
@@ -787,7 +961,8 @@ form .sumbit-contact .sumbit-contact-inner-box {
   .main .why-learn-with-us .why-learn-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    padding: 65px 10px 10px;
   }
   .main .why-learn-with-us .why-learn-container .why-learn-main {
     display: flex;
@@ -795,17 +970,25 @@ form .sumbit-contact .sumbit-contact-inner-box {
   .main .why-learn-with-us .why-learn-container .why-learn-main .green-side,
 .main .why-learn-with-us .why-learn-container .why-learn-main .black-side {
     width: 50%;
+    max-width: 550px;
+    margin: 10px;
+    padding: 10px;
     transition: all 0.5s linear;
   }
   .main .why-learn-with-us .why-learn-container .why-learn-main .green-side:hover,
 .main .why-learn-with-us .why-learn-container .why-learn-main .black-side:hover {
     transform: scale(1.1);
-    box-shadow: 10px 10px 50px #000;
+    box-shadow: 10px 10px 50px black;
   }
   .main .about-us p {
     max-width: 1100px;
     margin-right: auto;
     margin-left: auto;
+  }
+  .main .how-it-works .how-it-works-explain {
+    flex-flow: row;
+    width: 100%;
+    align-self: center;
   }
   .main .inner-container {
     padding: 65px 10px 10px;
@@ -877,13 +1060,13 @@ form .sumbit-contact .sumbit-contact-inner-box {
   }
 }
 @media (min-width: 1205px) {
-  .how-it-works .categories-container {
+  .main .how-it-works .how-it-works-explain .categories-container {
     display: flex;
     justify-content: center;
     margin: 0 auto 300px;
     width: 100%;
   }
-  .how-it-works .categories-container ul {
+  .main .how-it-works .how-it-works-explain .categories-container ul {
     flex-shrink: 0;
     width: 1100px;
     display: grid;
@@ -893,5 +1076,85 @@ form .sumbit-contact .sumbit-contact-inner-box {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+  }
+  .main .how-it-works .how-it-works-explain .categories-container ul .category-container {
+    display: flex;
+    flex-flow: column;
+    height: 65%;
+    width: 50%;
+    padding: 45px;
+    background: none;
+    margin: 0;
+  }
+  .main .how-it-works .how-it-works-explain .categories-container ul .category-container .triangle {
+    display: block;
+    height: 0;
+    width: 0;
+    border: 25px solid white;
+    flex-shrink: 0;
+    position: relative;
+  }
+  .main .how-it-works .how-it-works-explain .categories-container ul .category-container .triangle-down,
+.main .how-it-works .how-it-works-explain .categories-container ul .category-container .triangle-left,
+.main .how-it-works .how-it-works-explain .categories-container ul .category-container .triangle-right {
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  .main .how-it-works .how-it-works-explain .categories-container ul .category-container .triangle-left {
+    float: left;
+    margin-top: -60px;
+    border-top-color: transparent;
+    right: 505px;
+    top: 50px;
+  }
+  .main .how-it-works .how-it-works-explain .categories-container ul .category-container .triangle-down {
+    border-right-color: transparent;
+    top: 95px;
+    right: 400px;
+  }
+  .main .how-it-works .how-it-works-explain .categories-container ul .category-container .triangle-right {
+    border-top-color: transparent;
+    border-right-color: transparent;
+    top: -480px;
+    left: 95px;
+  }
+  .main .how-it-works .how-it-works-explain .categories-container ul .category-container .fa-thin {
+    display: none;
+  }
+  .main .how-it-works .how-it-works-explain .categories-container ul .category-container .category-inner-menu {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    max-height: 1000px !important;
+    height: 100%;
+  }
+  .main .how-it-works .how-it-works-explain .categories-container ul #programing-category {
+    grid-row: -3/-2;
+    grid-column: 1/2;
+    order: 1;
+  }
+  .main .how-it-works .how-it-works-explain .categories-container ul #programing-category .triangle-left {
+    border-right-color: #0598a8;
+  }
+  .main .how-it-works .how-it-works-explain .categories-container ul #web-category {
+    grid-row: -3/-2;
+    grid-column: 2/3;
+    order: 2;
+  }
+  .main .how-it-works .how-it-works-explain .categories-container ul #web-category .triangle-down {
+    border-top-color: #39a4dc;
+  }
+  .main .how-it-works .how-it-works-explain .categories-container ul #embedded-category {
+    grid-row: -3/-2;
+    grid-column: 3/4;
+    order: 4;
+  }
+  .main .how-it-works .how-it-works-explain .categories-container ul #embedded-category .triangle-right {
+    border-left-color: #06f;
+  }
+  .main .how-it-works .how-it-works-explain .categories-container ul #it-category {
+    grid-row: -3/-2;
+    grid-column: 4/5;
+    order: 3;
   }
 }
